@@ -37,12 +37,12 @@
             <Button x:Name="Remove_btn" FontSize="16" Content="REMOVE" Margin="5,8" Padding="3" Command="{Binding Path=RemovestudentCommand}"/>
         </StackPanel>
         <TextBlock x:Name="txtErrorMessage" Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Text="{Binding Path=Message}"/>
-        <DataGrid x:Name="DG_Students" Grid.Row="7" Grid.Column="1" AutoGenerateColumns="False" Margin="5,8" Padding="3" ItemsSource="{Binding Path=StudentList,Mode=TwoWay}" FontSize="16">
+        <DataGrid x:Name="DG_Students" Grid.Row="7" Grid.Column="1" AutoGenerateColumns="False" Margin="5,8" Padding="3" ItemsSource="{Binding Path=StudentList,Mode=TwoWay}" FontSize="16"  IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Width="auto" Binding="{Binding Path=Id}"/>
                 <DataGridTextColumn Header="Name" Width="auto" Binding="{Binding Path=Name}"/>
                 <DataGridTextColumn Header="Mobile Number" Width="auto" Binding="{Binding Path=MobileNumber}"/>
-                <DataGridTextColumn Header="Email Address" Width="auto" Binding="{Binding Path=Email}"/>
+                <DataGridTextColumn Header="Email Address" Width="*" Binding="{Binding Path=Email}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
